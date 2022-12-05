@@ -1,1 +1,74 @@
-hello user
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ZYGAL-Assignment--Dec-22 BY KARRI DINESH</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        margin: 2px;
+    }
+    .row1,.row2{
+        display: flex;
+    }
+    .one{
+        background: red;
+    }
+    .two{
+        background-color: yellow;
+    }
+    .three{
+        background-color: brown;
+    }
+    .four{
+        background-color: green;
+    }
+    </style>
+</head>
+
+<body>
+<div class="row1">
+    <div class="box one" id="one">
+        1
+    </div>
+    <div  class="box two" id="two">
+        2
+    </div>
+</div>
+<div class="row1">
+    <div  class="box three" id="three">
+        3
+    </div>
+    <div  class="box four" id="four">
+        4
+    </div>
+</div>
+    <button id="button1" >Clockwise</button>
+    <button id="button2">Anti-Clockwise</button>
+
+<script>
+    button1 = document.getElementById("button1")
+    button2 = document.getElementById("button2")
+    box1 = document.getElementById("one");
+    box2 = document.getElementById("two");
+    box3 = document.getElementById("three");
+    box4 = document.getElementById("four");
+      let currentColor = 0;
+      button1.addEventListener('click', function() {
+        let listColor = ['red', 'yellow', 'green', 'brown'];
+        box1.style.backgroundColor = listColor[currentColor++];
+        box2.style.backgroundColor = listColor[currentColor++];
+        box3.style.backgroundColor = listColor[currentColor++];
+        box4.style.backgroundColor = listColor[currentColor++];
+        if (currentColor == listColor.length) {
+    currentColor = 0;
+  }
+});
+
+    
+
+</script>
+
+</body>
+
+</html>
